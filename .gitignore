@@ -1,41 +1,78 @@
-# Prerequisites
-*.d
+# ---- Rust / Cargo ----
+# Compiled files and build artifacts
+/target/
+/debug/
+/release/
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Incremental compilation cache
+**/*.rs.bk
+/.cargo/
+/.cargo-ok
 
-# Precompiled Headers
-*.gch
-*.pch
+# Cargo package manager registry and git checkouts
+/.cargo/registry/
+/.cargo/git/
 
-# Linker files
-*.ilk
+# Build output logs
+cargo.lock
+# (Optional: keep Cargo.lock for executables, ignore for libraries)
+# Uncomment below to keep Cargo.lock for binaries:
+# !Cargo.lock
 
-# Debugger Files
+# ---- IDE / Editor Files ----
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# IntelliJ / CLion / RustRover
+.idea/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim / Emacs
+*~
+*.swp
+*.swo
+.DS_Store
+
+# ---- Tools & Misc ----
+
+# Rustfmt backup
+**/*.rs.bk
+
+# Coverage tools
+/coverage/
+/*.profraw
+/*.profdata
+
+# Profiling tools (flamegraph outputs, etc.)
+/perf.data
+/perf.data.old
+
+# Debug symbol files
 *.pdb
+*.dSYM/
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# ---- OS-specific ----
 
-# Fortran module files
-*.mod
-*.smod
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# Executables
-*.exe
-*.out
-*.app
+# Linux
+*~
 
-# debug information files
-*.dwo
+
+
+# Added by cargo
+
+/target
